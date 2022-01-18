@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #elem{
+            padding: 30px,30px,30px,30px;
+            background-color: aqua;
+        }
+#text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: large;
+}
+.bold{
+    font-weight: bolder;
+}
+    </style>
+</head>
+
+<body>
+    <span id ='elem'>
+        Hover mouse here to highlight text
+    </span>
+    <div id='text'>
+        When a web page is loaded, the browser creates a <span class="target ">D</span>ocument <span class="target">O</span>bject <span class="target">M</span>odel of the page.
+The <span class="target">HTML DOM</span> model is constructed as a tree of <span class="target">Objects</span>
+
+    </div>
+</body>
+<script>
+    var elem=document.getElementById("elem")
+    elem.onmouseenter=()=>{
+        let target=document.getElementsByClassName("target")
+        for (let i=0;i<target.length;i++){
+            target[i].classList.add('bold')
+        }
+    }
+    elem.onmouseleave=()=>{
+        let target=document.getElementsByClassName("target")
+            for(let i=0;i<target.length;i++){
+                target[i].classList.remove('bold')
+            }
+    }
+  
+</script>
+<noscript>Your browser cannot run javascript</noscript>
+</html>

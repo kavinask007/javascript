@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+    button{
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left:50%
+    }
+</style>
+</head>
+<body>
+    <div>
+        <p id='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare. Parturient montes nascetur ridiculus mus mauris. Amet dictum sit amet justo donec enim diam. Ipsum suspendisse ultrices gravida dictum fusce ut. Id faucibus nisl tincidunt eget nullam non nisi est sit. Sed viverra tellus in hac habitasse. Volutpat commodo sed egestas egestas fringilla phasellus. Sit amet aliquam id diam maecenas ultricies mi eget. Augue interdum velit euismod in pellentesque massa placerat duis. Donec ac odio tempor orci dapibus. Dolor magna eget est lorem ipsum dolor. Enim facilisis gravida neque convallis. Egestas sed sed risus pretium quam vulputate dignissim. Lorem sed risus ultricies tristique nulla aliquet. Nullam ac tortor vitae purus. Malesuada fames ac turpis egestas sed tempus.</p>
+    </div>
+    <button onclick="change()">Change paragraph background</button>
+</body>
+<script>
+function change(){
+    var prompt = window.prompt("enter a color");
+    var para=document.getElementById('para')
+    para.style.backgroundColor=prompt
+}
+</script>
+<noscript>enable js</noscript>
+</html>

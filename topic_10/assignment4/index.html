@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #image{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id='image'></div>
+    <button onclick="randomImage()">Change Random image</button>
+</body>
+<script>
+
+function randomImage(){
+    var img = document.getElementById('image')
+    var images=['image1.jpg','image2.jpg','image3.jpg','image4.jpg','image5.jpg'];
+    var random = Math.floor(Math.random() * images.length);
+    img.style.backgroundImage = "url(" + images[random] + ")";
+    img.style.backgroundSize='cover';
+}
+</script>
+<noscript>Please enable js to continue</noscript>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+ <form onsubmit='return false'>
+     <label for='pin'>Enter Pin</label>
+     <input type="text" id="pin" />
+     <button onclick="valid_pin()">submit</button>
+ </form>
+ <div id="message">
+ </div>  
+</body>
+<script>
+    function valid_pin()
+    {   
+     var str=document.getElementById("pin").value
+    var msg=document.getElementById("message")
+    var pinformat = /^[0-9]{6}$/;  
+    if(pinformat.test(str))
+    {  
+    msg.textContent= "Valid pin code!";  
+    }  
+    else  
+    {  
+    msg.textContent="You have entered an invalid pin code!";  
+    }
+    }
+    
+</script>
+<noscript>Your browser does not support javascript</noscript>
+</html>

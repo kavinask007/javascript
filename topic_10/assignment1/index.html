@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id='message'></div>
+</body>
+<script>
+    // for when the document loaded
+    msg =document.getElementById("message")
+        msg.textContent='Width : '+window.innerWidth+','+"Height : "+window.innerHeight;
+    // for when the resize event is fired
+    window.onresize=()=>{
+        msg =document.getElementById("message")
+        msg.textContent='Width : '+window.innerWidth+','+"Height : "+window.innerHeight;
+    }
+</script>
+<noscript>Your browser does not support javascript</noscript>
+</html>
